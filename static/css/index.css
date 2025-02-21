@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    font-family: Pretendard-Regular;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/img/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 20vh;
+}
+
+/* 가로가 세로보다 길 경우(PC 화면) 9:16 비율 유지 */
+@media (min-aspect-ratio: 9/16) {  
+    .background-container {
+        width: auto;
+        height: 100vh; /* 세로를 화면에 맞춤 */
+        aspect-ratio: 9 / 16; /* 9:16 비율 유지 */
+    }
+}
+
+.maintitle {
+    margin-left: 30px;
+    font-size: 22pt;
+}
+
+.bold {
+    font-weight: 700;
+    color: #595959;
+}
+
+.menus {
+    margin-top: 50px;
+    padding: 4vh;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    width: 11vh;
+    height: 11vh;
+    background-color: #D45151;
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    font-size: 18pt;
+}
+
+.right {
+    margin-top: 100px;
+}
+
+.no {
+    display: none;
+}
