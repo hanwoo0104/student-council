@@ -7,34 +7,24 @@
     <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
-    <div class="background-container">
-        <div class="maintitle">
-            <span>안녕하세요.<br><span class="bold">신사중학교 학생회</span>입니다!</span>
-        </div>
-        <div class="menus">
-            <div class="top">
-                <div class="card">
-                    <span>공약이행<br>확인하기<br><br></span>
-                    <div style="text-align: right;"><span class="right">→</span></div>
-                </div>
-                <div class="card">
-                    <span>이벤트<br>응모하기<br><br></span>
-                    <div style="text-align: right;"><span class="right">→</span></div>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="card">
-                    <span>온라인<br>의견내기<br><br></span>
-                    <div style="text-align: right;"><span class="right">→</span></div>
-                </div>
-                <div class="card no">
-                    <span>온라인<br>의견내기<br><br></span>
-                    <div style="text-align: right;"><span class="right">→</span></div>
-                </div>
-            </div>
-        </div>
+
+    <div class="title">
+        <span>안녕하세요.<br><span class="bold">신사중학교 학생회</span>입니다!</span>
+    </div>
+
+    <div class="container">
+        <button class="button" onclick="location.href='/promise.html'">
+            <span>공약이행<br>확인하기</span>
+            <span class="arrow">→</span>
+        </button>
+        <button class="button" onclick="location.href='/event.html'">
+            <span>이벤트<br>응모하기</span>
+            <span class="arrow">→</span>
+        </button>
+        <button class="button" onclick="location.href='/opinion.html'">
+            <span>온라인<br>의견내기</span>
+            <span class="arrow">→</span>
+        </button>
     </div>
 </body>
 </html>
-
-<!-- 버튼 배열 수정, 크기 자동 조정 -->

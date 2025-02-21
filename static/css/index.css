@@ -1,3 +1,10 @@
+* {
+    font-family: Pretendard-Regular;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -6,39 +13,18 @@
 }
 
 body {
-    display: flex;
-    font-family: Pretendard-Regular;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.background-container {
-    width: 100%;
-    height: 100%;
     background-image: url('/static/img/background.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding-top: 20vh;
+    height: 100vh;
 }
 
-/* 가로가 세로보다 길 경우(PC 화면) 9:16 비율 유지 */
-@media (min-aspect-ratio: 9/16) {  
-    .background-container {
-        width: auto;
-        height: 100vh; /* 세로를 화면에 맞춤 */
-        aspect-ratio: 9 / 16; /* 9:16 비율 유지 */
-    }
-}
 
-.maintitle {
-    margin-left: 30px;
-    font-size: 22pt;
+.title {
+    font-size: 20pt;
+    padding: 20px;
+    margin-top: 50px;
 }
 
 .bold {
@@ -46,36 +32,60 @@ body {
     color: #595959;
 }
 
-.menus {
-    margin-top: 50px;
-    padding: 4vh;
-}
-
-.top {
-    display: flex;
-    justify-content: space-between;
-}
-
-.bottom {
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card {
-    width: 11vh;
-    height: 11vh;
-    background-color: #D45151;
-    border-radius: 15px;
-    color: white;
-    padding: 20px;
-    font-size: 18pt;
-}
-
-.right {
-    margin-top: 100px;
-}
-
 .no {
     display: none;
+}
+
+.container {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 배치 */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 1/1; /* 정사각형 형태 유지 */
+    margin: 20px auto;
+}
+
+.button {
+    background-color: #c44d42;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.button:hover {
+    background-color: #a03d36;
+}
+
+.arrow {
+    align-self: flex-end;
+    font-size: 1.5rem;
+}
+
+/* 📌 모바일에서도 2x2 유지 */
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: unset;
+    }
+
+    .button {
+        aspect-ratio: 1/1; /* 버튼을 정사각형 유지 */
+    }
 }

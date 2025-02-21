@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: Pretendard-Regular;
+    height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.back-button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    line-height: 30px;
+    z-index: 1;
+    color: black;
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-self: center;
+    width: 80%;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.progress-bar {
+    width: 38%; /* 진행률 조정 가능 */
+    height: 20px;
+    background: #4caf50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.promise-list {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.promise-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.promise-item:last-child {
+    border-bottom: none;
+}
+
+.promise-status {
+    color: #007bff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.arrow {
+    font-size: 18px;
+    color: #333;
+}
+
+.promise-item:hover {
+    background: #f0f0f0;
+}
+
+.description {
+    display: none;
+    padding: 10px 15px;
+    background: #f8f8f8;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+.content {
+    margin-top: 50vh;
+}
